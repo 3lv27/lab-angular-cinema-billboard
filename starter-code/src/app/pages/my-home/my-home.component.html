@@ -1,0 +1,11 @@
+<div>
+  <h2>Movies list</h2>
+  <div *ngFor="let movie of movies">
+    <div>
+      <p>Title: {{ movie.title }}, {{ movie.year }}</p>
+      <img [src]="movie.poster" alt="">
+      <p>Synopsis: {{ movie.synopsis }}</p>
+      <a [routerLink]="['/movies', movie.id]">See details</a>
+    </div>
+  </div>
+</div>
